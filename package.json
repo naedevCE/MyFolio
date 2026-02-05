@@ -1,9 +1,10 @@
 {
-  "homepage": "https://naedevCE.github.io/MyFolio",
+
   "name": "my-react-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+ "homepage": "https://wirwat.github.io/MyFolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
