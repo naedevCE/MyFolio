@@ -1,10 +1,9 @@
 {
-
   "name": "my-react-app",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
- "homepage": "https://wirwat.github.io/MyFolio",
+  "homepage": "https://naedevCE.github.io/MyFolio",
+  "private": false,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
