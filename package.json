@@ -2,7 +2,7 @@
   "name": "my-react-app",
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://wiraw.github.io/MyFolio",
+  "homepage": "https://naedevCE.github.io/MyFolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
