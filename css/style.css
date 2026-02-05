@@ -1,0 +1,1196 @@
+/* ============================= */
+/* -------- General CSS -------- */
+/* ============================= */
+
+body {
+    color: #444444;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    background: #ffffff;
+     font-family: 'Inter', sans-serif;
+}
+
+a {
+    color: #111111;
+    transition: 0.3s ease;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #777777;
+    outline: none;
+    text-decoration: none;
+}
+
+p {
+    padding: 0;
+    margin: 0 0 15px 0;
+    color: #555555;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Solway', serif;
+    color: #111111;
+    margin: 0 0 15px 0;
+    padding: 0;
+}
+
+/* Back to top – minimal */
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: #111111;
+    color: #ffffff;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 16px;
+    border-radius: 50%;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.3s ease;
+    z-index: 11;
+}
+
+.back-to-top:hover {
+    background: #333333;
+}
+
+.back-to-top i {
+    padding-top: 12px;
+    color: #ffffff;
+}
+
+
+
+/* ============================= */
+/* ------ Top Header CSS ------- */
+/* ============================= */
+
+.top-header {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: #ffffff;
+    background: #111111;
+}
+
+/* Background image + dark overlay */
+/* ============================= */
+/* ------ Top Header CSS ------- */
+/* ============================= */
+
+.top-header {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: #ffffff;
+    background: #111111;
+    overflow: hidden; /* ⭐ สำคัญ */
+}
+
+/* Background image + dark overlay */
+.top-header::before {
+    content: '';
+    position: absolute;
+    inset: -20px; /* เผื่อพื้นที่ blur */
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.75),
+            rgba(0,0,0,0.75)
+        ),
+        url(../img/top-header.jpg) center/cover no-repeat;
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+    z-index: 0;
+}
+
+/* Center content */
+.top-header .container {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Profile image */
+.top-header img {
+    height: 180px;
+    margin-bottom: 30px;
+    border: 10px solid rgba(255,255,255,0.15);
+}
+
+/* Name */
+.top-header h1 {
+    font-size: 5vw;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+/* Subtitle / typing text */
+.top-header h2 {
+    display: inline-block;
+    margin: 0;
+    height: 40px;
+    font-size: 3vw;
+    font-weight: 300;
+    color: #d1d1d1;
+}
+
+.top-header p {
+    display: none;
+}
+
+.top-header .typed-cursor {
+    font-size: 3vw;
+    color: #d1d1d1;
+}
+
+
+
+/* ============================= */
+/* -------- Header CSS --------- */
+/* ============================= */
+/* ============================= */
+/* ---- Minimal Header CSS ---- */
+/* ============================= */
+
+:root {
+    --black: #000000;
+    --dark: #111111;
+    --gray: #666666;
+    --light-gray: #f4f4f4;
+    --white: #ffffff;
+}
+
+/* ===== Header ===== */
+.header {
+    background: var(--white);
+    height: 70px;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.header .logo {
+    margin: 14px 25px 0 0;
+}
+
+.header .logo h1 {
+    font-size: 32px;
+    margin: 0;
+    padding: 2px 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.header .logo h1 a,
+.header .logo h1 a:hover {
+    color: var(--black);
+    text-decoration: none;
+}
+
+/* ===== Social ===== */
+.header .social-nav {
+    margin-top: 18px;
+}
+
+.header .social-nav a {
+    font-size: 20px;
+    margin-left: 14px;
+    color: var(--gray);
+    transition: 0.2s;
+}
+
+.header .social-nav a:hover {
+    color: var(--black);
+}
+
+/* ===== Desktop Nav ===== */
+.nav-menu,
+.nav-menu * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu > li {
+    float: left;
+}
+
+.nav-menu a {
+    padding: 22px 16px;
+    display: inline-block;
+    color: var(--gray);
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.nav-menu a:hover,
+.nav-menu .menu-active > a {
+    color: var(--black);
+}
+
+/* ===== Dropdown ===== */
+.nav-menu ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background: var(--white);
+    border: 1px solid var(--light-gray);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+    z-index: 99;
+}
+
+.nav-menu li:hover > ul {
+    display: block;
+}
+
+.nav-menu ul li {
+    min-width: 180px;
+}
+
+.nav-menu ul li a {
+    padding: 12px 18px;
+    color: var(--gray);
+}
+
+.nav-menu ul li a:hover {
+    color: var(--black);
+    background: var(--light-gray);
+}
+
+/* ===== Mobile Toggle ===== */
+#mobile-nav-toggle {
+    position: fixed;
+    right: 12px;
+    top: 12px;
+    z-index: 999;
+    background: none;
+    border: none;
+    font-size: 24px;
+    display: none;
+    cursor: pointer;
+}
+
+#mobile-nav-toggle i {
+    color: var(--black);
+}
+
+/* ===== Mobile Nav ===== */
+#mobile-nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -260px;
+    width: 260px;
+    background: var(--white);
+    border-right: 1px solid var(--light-gray);
+    padding-top: 20px;
+    transition: 0.3s;
+    z-index: 998;
+}
+
+#mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#mobile-nav ul li a {
+    padding: 12px 20px;
+    display: block;
+    color: var(--gray);
+    font-size: 15px;
+    text-decoration: none;
+}
+
+#mobile-nav ul li a:hover {
+    color: var(--black);
+    background: var(--light-gray);
+}
+
+#mobile-body-overly {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    z-index: 997;
+}
+
+body.mobile-nav-active {
+    overflow: hidden;
+}
+
+body.mobile-nav-active #mobile-nav {
+    left: 0;
+}
+
+body.mobile-nav-active #mobile-body-overly {
+    display: block;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .header {
+        height: 56px;
+    }
+
+    .header .logo {
+        margin: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .header .logo h1 {
+        font-size: 24px;
+    }
+
+    #nav-menu-container {
+        display: none;
+    }
+
+    #mobile-nav-toggle {
+        display: inline;
+    }
+}
+
+
+
+
+/* ============================= */
+/* ---- Minimal Header Title --- */
+/* ============================= */
+
+:root {
+    --black: #000000;
+    --gray: #666666;
+    --light-gray: #eaeaea;
+}
+
+/* ===== Title ===== */
+.section-header h2,
+.section-header h3 {
+    display: inline-block;
+    color: var(--black);
+    font-size: 34px;
+    font-weight: 700;
+    text-transform: none;
+    text-align: left;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid var(--black);
+}
+
+/* ตัด decoration เดิมออก */
+.section-header h2::before,
+.section-header h2::after,
+.section-header h3::before,
+.section-header h3::after {
+    display: none;
+}
+
+/* ===== Description ===== */
+.section-header p {
+    text-align: left;
+    color: var(--gray);
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ===== Responsive ===== */
+@media (min-width: 992px) {
+    .section-header p {
+        width: 70%;
+    }
+}
+
+
+
+
+/* ============================= */
+/* ------- About Me CSS -------- */
+/* ============================= */
+
+.about {
+    padding: 60px 0 15px 0;
+    position: relative;
+}
+
+.about .row {
+    margin-bottom: 30px;
+}
+
+.about img {
+    width: 100%;
+}
+
+.about h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.about h4 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.about p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.about a {
+    display: inline-block;
+    padding: 6px 20px;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    border: 1px solid #d49218;
+}
+
+.about a:hover {
+    color: #ffffff;
+    background: #000000;
+}
+
+.about .skills h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+.about .skill-name {
+    position: relative;
+    width: 100%;
+}
+
+.about .skill-name p {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.about .skill-name p:last-child {
+    float: right;
+}
+
+.about .progress {
+    margin-bottom: 15px;
+    border-radius: 0;
+}
+
+.about .progress .progress-bar {
+    background: #000000;
+    border-radius: 0;
+}
+
+
+
+/* ============================= */
+/* ------- Experience CSS ------ */
+/* ============================= */
+
+/* ============================= */
+/* ---- Experience (Minimal) --- */
+/* ============================= */
+
+:root {
+    --black: #000000;
+    --dark-gray: #333333;
+    --gray: #666666;
+    --light-gray: #f2f2f2;
+    --border-gray: #e0e0e0;
+}
+
+/* Section */
+.experience {
+    width: 100%;
+    padding: 80px 5%;
+    background: #ffffff;
+}
+
+/* Header */
+.section-header h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 8px;
+}
+
+.section-header p {
+    margin: 0 0 50px;
+    color: var(--gray);
+    font-size: 15px;
+}
+
+/* ============================= */
+/* ------- Experience Card ----- */
+/* ============================= */
+
+.experience .exp-column {
+    position: relative;
+    margin-top: 30px;
+    padding: 40px 32px 28px;
+    background: #ffffff;
+    border: 1px solid var(--border-gray);
+    transition: all 0.3s ease;
+}
+
+/* Top line */
+.experience .exp-column::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    top: 0;
+    left: 24px;
+    right: 100%;
+    background: var(--black);
+    transition: all .3s ease;
+}
+
+/* Bottom line */
+.experience .exp-column::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    bottom: 0;
+    right: 24px;
+    left: 100%;
+    background: var(--black);
+    transition: all .3s ease;
+}
+
+/* Hover */
+.experience .exp-column:hover {
+    transform: translateY(-4px);
+}
+
+.experience .exp-column:hover::before {
+    right: 24px;
+}
+
+.experience .exp-column:hover::after {
+    left: 24px;
+}
+
+/* ============================= */
+/* -------- Text Style --------- */
+/* ============================= */
+
+.experience .exp-date {
+    margin-bottom: 6px;
+    color: var(--gray);
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+
+.experience .exp-date span {
+    font-style: italic;
+}
+
+.experience .exp-company {
+    margin-bottom: 2px;
+    color: var(--black);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.experience .exp-designation {
+    margin-bottom: 14px;
+    color: var(--gray);
+    font-size: 15px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.experience .exp-detail {
+    margin-bottom: 0;
+    color: var(--dark-gray);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ============================= */
+/* -------- Responsive --------- */
+/* ============================= */
+
+@media (max-width: 768px) {
+    .experience {
+        padding: 60px 20px;
+    }
+
+    .experience .exp-column {
+        padding: 32px 22px 26px;
+    }
+}
+
+
+
+
+/* ============================= */
+/* -------- Services CSS ------- */
+/* ============================= */
+
+.services {
+    padding: 60px 0;
+    text-align: center;
+    background: #ffffff;
+}
+
+.services .section-header {
+    text-align: left;
+}
+
+.services .section-header p {
+    margin:0;
+}
+
+.services .single-service {
+    position: relative;
+    text-align: center;
+    font-weight: 300;
+    margin:30px 0 0;
+    padding: 25px 15px 30px 15px;
+    background: #e9ecef;
+}
+
+.services .single-service::before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    top: 0;
+    right: 100%;
+    left: 0;
+    background: #000000;
+}
+
+.services .single-service::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    bottom: 0;
+    right: 0;
+    left: 100%;
+    background: #000000;
+}
+
+.services .single-service:hover::before {
+    transition: .3s;
+    right: 0;
+}
+
+.services .single-service:hover::after {
+    transition: .3s;
+    left: 0;
+}
+
+.services .single-service .service-icon {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 0 auto 20px;
+    text-align: center;
+    width: 120px;
+    color: #000000;
+}
+
+.services .single-service h4,
+.services .single-service h4 a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.services .single-service p {
+    margin-bottom: 0;
+}
+
+.services .single-service span {
+    position: absolute;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+
+
+/* ============================= */
+/* -------- Counter CSS -------- */
+/* ============================= */
+
+.counters {
+    padding: 60px 0;
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    background: #000000;
+}
+
+.counters .counter .counter-icon-box {
+    color: #ffffff;
+    margin: 0;
+    font-size: 50px;
+    transition: all 400ms linear 0s;
+}
+
+.counters .counter:hover .counter-icon-box {
+    transform: translateY(-15px);
+}
+
+.counters .counter .number {
+    font-size: 70px;
+    margin: 0 0 15px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: 'Solway', serif;
+}
+
+.counters .number:after {
+    color: #fff;
+    content: "+";
+    font-size: 40px;
+    position: absolute;
+    top: calc(50% + 25px);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.counters .counter h4 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+
+
+/* ============================= */
+/* ------- Portfolio CSS ------- */
+/* ============================= */
+
+.portfolio {
+    position: relative;
+    clear: both;
+    padding: 60px 0 30px 0;
+}
+
+.portfolio #portfolio-flters {
+    padding: 0;
+    margin: -15px 0 30px 0;
+    list-style: none;
+    text-align: center;
+}
+
+.portfolio #portfolio-flters li {
+    cursor: pointer;
+    margin: 15px -3px 5px -3px;
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: 1px solid #000;
+    background: #fff;
+    transition: 0.3s;
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+    background: #000;
+    color: #fff;
+}
+
+/* ============================= */
+/* Portfolio Card Layout */
+/* ============================= */
+/* ============================= */
+/* Portfolio Item Minimal Card  */
+/* ============================= */
+
+.portfolio-item {
+    margin-bottom: 30px;
+}
+
+/* Card */
+.portfolio-wrap {
+    background: #d0d1a225;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.25s ease;
+    height: 100%;
+}
+
+.portfolio-wrap:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(247, 211, 10, 0.08);
+}
+
+/* Image */
+.portfolio-wrap a {
+    display: block;
+    overflow: hidden;
+}
+
+.portfolio-wrap img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+/* Image hover effect */
+.portfolio-wrap:hover img {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Text area */
+.portfolio-text {
+    padding: 16px 18px;
+    text-align: left;
+}
+
+/* Title */
+.portfolio-text h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 6px;
+    color: #000000;
+}
+
+/* Description */
+.portfolio-text p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0 0 6px;
+    color: #555555;
+}
+
+/* Tech stack */
+.portfolio-text small {
+    font-size: 12px;
+    color: #888888;
+    display: block;
+}
+
+/* Click hint */
+.portfolio-wrap a::after {
+    content: "Click to view";
+    position: absolute;
+    bottom: 10px;
+    right: 12px;
+    font-size: 11px;
+    color: #000000;
+    background: rgba(255, 117, 3, 0.7);
+    padding: 4px 8px;
+    border-radius: 12px;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+/* Show hint on hover */
+.portfolio-wrap:hover a::after {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .portfolio-wrap img {
+        height: 170px;
+    }
+
+    .portfolio-text {
+        padding: 14px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .portfolio-wrap img {
+        height: 150px;
+    }
+
+    .portfolio-text h4 {
+        font-size: 14px;
+    }
+
+    .portfolio-text p {
+        font-size: 12.5px;
+    }
+}
+
+
+/* ============================= */
+/* ------ Testimonials CSS ----- */
+/* ============================= */
+
+.testimonials {
+    background: url("../img/testimonial-bg.jpg") center top no-repeat fixed;
+    background-size: cover;
+    padding: 40px 0 60px 0;
+    text-align: center;
+    position: relative;
+}
+
+.testimonials .container {
+    max-width: 700px;
+}
+
+.testimonials::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(000, 000, 000, 0.7);
+}
+
+.testimonials .container {
+    position: relative;
+    z-index: 9;
+}
+
+
+.testimonials i {
+    padding: 20px 0;
+    color: #000000;
+}
+
+.testimonials .testimonial-item {
+    text-align: center;
+}
+
+.testimonials .testimonial-item .testimonial-img {
+    width: 120px;
+    border: 10px solid rgba(256, 256, 256, .1);
+    margin: 0 auto;
+}
+
+.testimonials .testimonial-item h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 15px 0 5px 0;
+    color: #000000;
+}
+
+.testimonials .testimonial-item h4 {
+    color: #999999;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0 0 10px 0;
+}
+
+.testimonials .testimonial-item p {
+    color: #ffffff;
+    font-weight: 300;
+    margin: 0 auto;
+}
+
+.testimonials .owl-nav,
+.testimonials .owl-dots {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.testimonials .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.testimonials .owl-dot.active {
+    background-color: #000000;
+}
+
+
+
+/* ============================= */
+/* -------- Contact CSS -------- */
+/* ============================= */
+
+.contact {
+    position: relative;
+    padding: 60px 0;
+}
+
+.contact .contact-info p {
+    margin-bottom: 10px;
+    color: #666666;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+@media (max-width: 575px) {
+    .contact .contact-info p {
+        font-size: 16px;
+    }
+}
+
+.contact .contact-info a {
+    color: #666666;
+}
+
+.contact .contact-info a:hover {
+    color: #000000;
+}
+
+.contact .contact-info i {
+    width: 30px;
+    color: #000000;
+}
+
+.contact .social {
+    position: relative;
+    width: 100%;
+}
+
+.contact .social a {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    width: 40px;
+    height: 40px;
+    padding: 1px 0;
+    text-align: center;
+    font-size: 22px;
+    border: 1px solid #000000;
+}
+
+.contact .social a i {
+    color: #000000;
+}
+
+.contact .social a:hover {
+    background: #000000;
+}
+
+.contact .social a:hover i {
+    color: #ffffff;
+}
+
+.contact .form {
+    color: #666666;
+    font-weight: 300;
+}
+
+.contact .form input,
+.contact .form textarea {
+    color: #666666;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #000000;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.contact .form button[type="submit"] {
+    padding: 7px 30px 10px 30px;
+    color: #000000;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 0;
+    border: 1px solid #000000;
+    background: #ffffff;
+}
+
+.contact .form button[type="submit"]:hover {
+    background: #000000;
+    color: #FFFFFF;
+}
+
+
+
+/* ============================= */
+/* -------- Footer Style ------- */
+/* ============================= */
+
+.footer {
+    background: #1c1c1c;
+    padding: 30px 0;
+    margin-top: 80px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #9a9a9a;
+}
+
+.footer strong {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* Back to Top Button */
+.footer .btn-outline-light {
+    color: #ffcc00;
+    border: 1px solid #ffffff;
+    padding: 6px 14px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    transition: all 0.25s ease;
+}
+
+.footer .btn-outline-light:hover {
+    background: #030300;
+    color: #000000;
+    text-decoration: none;
+}
+/* ===== Background after menu ===== */
+/* body {
+  background: 
+    linear-gradient(rgba(255, 252, 252, 0.92), rgba(255,255,255,0.80)),
+    url("../img/ChatGPT.png") center top / cover no-repeat fixed;
+} */
+body {
+  background: 
+    linear-gradient(
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0.15)
+    ),
+    url("../img/ChatGPT.png") center top / cover no-repeat fixed;
+}
+
+
+/* กันไม่ให้พื้นหลังไปชน header ด้านบน */
+.top-header,
+.header {
+  background: #fff;
+  position: relative;
+  z-index: 10;
+}
