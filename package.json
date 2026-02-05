@@ -2,12 +2,10 @@
   "name": "my-react-app",
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://naedevCE.github.io/MyFolio",
-  "private": false,
+  "homepage": "https://wiraw.github.io/MyFolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
